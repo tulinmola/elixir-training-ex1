@@ -1,0 +1,5 @@
+<h2>New movie</h2>
+
+<%= render "form.html", conn: @conn, action: movie_path(@conn, :create) %>
+
+<%= link "Back", to: movie_path(@conn, :index) %>

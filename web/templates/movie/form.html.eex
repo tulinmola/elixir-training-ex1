@@ -1,0 +1,29 @@
+<%= form_for @conn, @action, [as: "movie"], fn f -> %>
+  <div class="form-group">
+    <%= label f, :title, class: "control-label" %>
+    <%= text_input f, :title, class: "form-control" %>
+    <%= error_tag f, :title %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :year, class: "control-label" %>
+    <%= number_input f, :year, class: "form-control" %>
+    <%= error_tag f, :year %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :cover, class: "control-label" %>
+    <%= text_input f, :cover, class: "form-control" %>
+    <%= error_tag f, :cover %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :plot, class: "control-label" %>
+    <%= textarea f, :plot, class: "form-control" %>
+    <%= error_tag f, :plot %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
